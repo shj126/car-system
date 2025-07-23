@@ -1,0 +1,54 @@
+﻿<Window x:Class="inspection.Register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        xmlns:local="clr-namespace:inspection"
+        mc:Ignorable="d"
+        Title="注册" Height="500" Width="350.625" Background="White" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow" ResizeMode="NoResize" VerticalAlignment="Center" Icon="images/登录 用户.png">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="400"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <StackPanel>
+                <TextBlock HorizontalAlignment="Center" Margin="10" FontSize="20" >教师注册</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="30" Margin="10">
+                <TextBlock VerticalAlignment="Center" Width="55" FontSize="16">教工号：</TextBlock>
+                <TextBox Width="240" VerticalAlignment="Center" Height="20" Margin="10 0 0 0" x:Name="ed_tid"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="30" Margin="10">
+                <TextBlock VerticalAlignment="Center" Width="55"  xml:space="preserve" FontSize="16">姓   名：</TextBlock>
+                <TextBox Width="240" VerticalAlignment="Center" Height="20" Margin="10 0 0 0" x:Name="ed_name"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="30" Margin="10">
+                <TextBlock VerticalAlignment="Center" Width="55"  xml:space="preserve" FontSize="16">密   码：</TextBlock>
+                <PasswordBox Width="240" VerticalAlignment="Center" Height="20" Margin="10 0 0 0" x:Name="ed_password"></PasswordBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="30" Margin="10">
+                <TextBlock VerticalAlignment="Center" Width="55"  xml:space="preserve" FontSize="16">性   别：</TextBlock>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10 0 0 0">
+                    <RadioButton GroupName="sex" FontSize="14" x:Name="sex_man" IsChecked="True">男</RadioButton>
+                    <RadioButton GroupName="sex" Margin="20 0 0 0" FontSize="14" x:Name="sex_woman">女</RadioButton>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="30" Margin="10">
+                <TextBlock VerticalAlignment="Center" Width="55"  xml:space="preserve" FontSize="16">院   系：</TextBlock>
+                <ComboBox x:Name="comb" Width="240" Margin="10 0 0 0"></ComboBox>
+            </StackPanel>
+            <StackPanel>
+                <Button Height="40" Style="{StaticResource ButtonPrimary}" Width="250" Margin="0 25 0 0" x:Name="btn_rigister_user" Click="btn_rigister_user_Click">注册</Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
